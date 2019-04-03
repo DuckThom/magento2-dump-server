@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Symfony\Component\VarDumper\Server\DumpServer">
+        <arguments>
+            <argument name="host" xsi:type="string">tcp://127.0.0.1:9912</argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="dump_server" xsi:type="object">Symfony\Component\VarDumper\Command\ServerDumpCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
