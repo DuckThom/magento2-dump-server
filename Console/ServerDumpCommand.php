@@ -1,6 +1,10 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Wiringa\DumpServer\Console;
+
+use Symfony\Component\VarDumper\Command\ServerDumpCommand as SymfonyServerDumpCommand;
 
 /**
  * Server dump command.
@@ -8,7 +12,7 @@ namespace Wiringa\DumpServer\Console;
  * @package     Wiringa\DumpServer
  * @author      Thomas Wiringa  <thomas.wiringa@gmail.com>
  */
-class ServerDumpCommand extends \Symfony\Component\VarDumper\Command\ServerDumpCommand
+class ServerDumpCommand extends SymfonyServerDumpCommand
 {
     /**
      * Return the default name.
