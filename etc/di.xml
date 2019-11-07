@@ -1,16 +1,23 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Symfony\Component\VarDumper\Server\DumpServer">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="dumpServer" type="Symfony\Component\VarDumper\Server\DumpServer">
         <arguments>
             <argument name="host" xsi:type="string">tcp://127.0.0.1:9912</argument>
         </arguments>
-    </type>
+    </virtualType>
 
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="dump_server" xsi:type="object">Wiringa\DumpServer\Console\ServerDumpCommand</item>
             </argument>
+        </arguments>
+    </type>
+
+    <type name="Wiringa\DumpServer\Console\ServerDumpCommand">
+        <arguments>
+            <argument name="server" xsi:type="object">dumpServer</argument>
         </arguments>
     </type>
 </config>
