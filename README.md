@@ -5,6 +5,9 @@ Symfony VarDumper implementation for Magento 2
 
 ```
 composer require --dev wiringa/magento2-dump-server "^1.0"
+
+bin/magento module:enable Wiringa_DumpServer
+bin/magento setup:upgrade
 ```
 
 ## Usage
