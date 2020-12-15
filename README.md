@@ -1,6 +1,11 @@
 # magento2-dump-server
 Symfony VarDumper implementation for Magento 2
 
+## Supported Magento versions
+
+- 2.3
+- 2.4 (Requires v1.1.0 and above)
+
 ## Installation
 
 ```
