@@ -4,7 +4,7 @@
   "type": "magento2-module",
   "license": "MIT",
   "require": {
-    "symfony/var-dumper": "^4.1",
+    "symfony/var-dumper": "^4.1|^5.0",
     "php": "^7.1"
   },
   "autoload": {
