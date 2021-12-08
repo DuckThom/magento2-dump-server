@@ -14,10 +14,4 @@
             </argument>
         </arguments>
     </type>
-
-    <type name="Wiringa\DumpServer\Console\ServerDumpCommand">
-        <arguments>
-            <argument name="server" xsi:type="object">dumpServer</argument>
-        </arguments>
-    </type>
 </config>
