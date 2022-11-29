@@ -10,7 +10,7 @@
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
-                <item name="dump_server" xsi:type="object">Wiringa\DumpServer\Console\ServerDumpCommand</item>
+                <item name="dump_server" xsi:type="object">Symfony\Component\VarDumper\Command\ServerDumpCommand</item>
             </argument>
         </arguments>
     </type>
